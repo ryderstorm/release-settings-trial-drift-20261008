@@ -1,0 +1,10 @@
+name: Existing workflow to preserve
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preserved:
+    runs-on: ubuntu-latest
+    steps:
+      - run: printf 'Existing workflow retained unchanged\n'

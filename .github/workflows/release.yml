@@ -1,0 +1,18 @@
+name: Existing release plumbing
+on:
+  workflow_dispatch:
+permissions: write-all
+jobs:
+  release:
+    if: ${{ false }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 1
+      - uses: python-semantic-release/python-semantic-release@9a026e9303981c866c3425723009becb2437c757
+        with:
+          config_file: .releaserc.toml
+          github_token: ${{ github.token }}
+          no_operation_mode: true
+          build: false

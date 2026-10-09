@@ -1,0 +1,15 @@
+[semantic_release]
+tag_format = "v{version}"
+allow_zero_version = false
+commit_message = "chore(release): {version} [skip ci]"
+version_variables = []
+
+[semantic_release.branches.main]
+match = "main"
+
+[semantic_release.changelog.default_templates]
+changelog_file = "CHANGELOG.md"
+output_format = "md"
+
+[semantic_release.remote]
+token = { env = "MISSING_RELEASE_TOKEN" }
