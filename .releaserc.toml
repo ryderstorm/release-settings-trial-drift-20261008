@@ -12,4 +12,4 @@ changelog_file = "CHANGELOG.md"
 output_format = "md"
 
 [semantic_release.remote]
-token = { env = "MISSING_RELEASE_TOKEN" }
+token = { env = "GH_TOKEN" }
